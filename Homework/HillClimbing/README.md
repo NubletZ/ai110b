@@ -3,6 +3,8 @@
 > * 學號 : 110810538
 > * 作品 : 並非100%原創
 
+For further explanation please refer to this [link](https://github.com/NubletZ/myNotes/blob/master/allNotes/AI-110/Week2.md).
+
 ## Reference
 The codes is not 100% originaly written by me, I took reference and had done some modification to the code below: 
 
