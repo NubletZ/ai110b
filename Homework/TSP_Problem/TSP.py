@@ -1,6 +1,8 @@
 #reference https://towardsdatascience.com/how-to-implement-the-hill-climbing-algorithm-in-python-1c65c29469de
 
 import random
+import re
+import time
 
 def randomSolution(tsp):
     cities = list(range(len(tsp)))
@@ -27,7 +29,6 @@ def getNeighbours(solution):
             neighbour[i] = solution[j]
             neighbour[j] = solution[i]
             neighbours.append(neighbour)
-    #print(f'neighbours = {neighbours}')
     return neighbours
 
 def getBestNeighbour(tsp, neighbours):
@@ -54,7 +55,32 @@ def hillClimbing(tsp):
 
     return currentSolution, currentRouteLength
 
+def readFile(path):
+    tsp = []
+    row = []
+
+    with open(path) as f:
+        line = f.readline()
+        firstLine = re.split('[-_\s]+', line)
+        for data in firstLine:
+            if data != '':
+                row.append(int(data))
+        tsp.append(row)
+        while line:
+            row = []
+            line = f.readline()
+            n = len(line)
+            if n > 0:   
+                datas = re.split('[-_\s]+', line)
+                for data in datas:
+                    if data != '':
+                        row.append(int(data))
+                tsp.append(row)
+        return tsp
+
 def main():
+    ''' 
+    # for test only
     tsp = [
         [0,29,82,46,68,52,72,42,51,55,29,74,23,72,46],
         [29,0,55,46,42,43,43,23,23,31,41,51,11,52,21],
@@ -72,20 +98,21 @@ def main():
         [72,52,31,43,65,29,46,31,51,23,59,11,62,0,59],
         [46,21,51,64,23,59,33,37,11,37,61,55,23,59,0]
     ]
-
+    '''
+    tsp = readFile('./tsp_d.txt')
     step = 0
     bestData = hillClimbing(tsp)
-    best = 291
+    best = 2085
     while bestData[1] != best:
-        #print('---')
         nextStep = hillClimbing(tsp)
-        #print(f'nextStep = {nextStep}')
         if nextStep[1] < bestData[1]:
             bestData = nextStep
         step += 1
-        print(f'{step}:currentData = {bestData}')
+        print(f'{step}:Length = {bestData[1]}')
 
     print(f'best data = {bestData} step = {step}')
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
+    print("--- %s seconds ---" % (time.time() - start_time))
