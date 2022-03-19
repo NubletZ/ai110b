@@ -27,6 +27,7 @@ def getNeighbours(solution):
             neighbour[i] = solution[j]
             neighbour[j] = solution[i]
             neighbours.append(neighbour)
+    #print(f'neighbours = {neighbours}')
     return neighbours
 
 def getBestNeighbour(tsp, neighbours):
@@ -72,7 +73,19 @@ def main():
         [46,21,51,64,23,59,33,37,11,37,61,55,23,59,0]
     ]
 
-    print(hillClimbing(tsp))
+    step = 0
+    bestData = hillClimbing(tsp)
+    best = 291
+    while bestData[1] != best:
+        #print('---')
+        nextStep = hillClimbing(tsp)
+        #print(f'nextStep = {nextStep}')
+        if nextStep[1] < bestData[1]:
+            bestData = nextStep
+        step += 1
+        print(f'{step}:currentData = {bestData}')
+
+    print(f'best data = {bestData} step = {step}')
 
 if __name__ == "__main__":
     main()
