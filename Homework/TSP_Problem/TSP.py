@@ -46,13 +46,11 @@ def hillClimbing(tsp):
     currentRouteLength = routeLength(tsp, currentSolution)
     neighbours = getNeighbours(currentSolution)
     bestNeighbour, bestNeighbourRouteLength = getBestNeighbour(tsp, neighbours)
-
     while bestNeighbourRouteLength < currentRouteLength:
         currentSolution = bestNeighbour
         currentRouteLength = bestNeighbourRouteLength
         neighbours = getNeighbours(currentSolution)
         bestNeighbour, bestNeighbourRouteLength = getBestNeighbour(tsp, neighbours)
-
     return currentSolution, currentRouteLength
 
 def readFile(path):
@@ -101,15 +99,17 @@ def main():
     '''
     tsp = readFile('./tsp_d.txt')
     step = 0
+    limit = 1000
     bestData = hillClimbing(tsp)
     best = 2085
-    while bestData[1] != best:
+    while bestData[1] != best and step <= limit:
         nextStep = hillClimbing(tsp)
         if nextStep[1] < bestData[1]:
             bestData = nextStep
         step += 1
         print(f'{step}:Length = {bestData[1]}')
-
+    if step > 1000:
+        print("already exceed the limit")
     print(f'best data = {bestData} step = {step}')
 
 if __name__ == "__main__":
