@@ -1,4 +1,4 @@
-# Applying Hill Climbing to Linear Regression
+# Applying DFS Algorithm to Solve Maze
 > * 作者 : 魏美亞
 > * 學號 : 110810538
 
