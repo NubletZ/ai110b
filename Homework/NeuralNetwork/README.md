@@ -1,3 +1,5 @@
+> The code in this notes is not 100% originally written by me. I modify the code from https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-from-scratch-for-mnist-handwritten-digit-classification/
+
 # Neural Network
 A neural network is one of machine learning models. The basic idea behind neural network is to simulate how human's brain cells work to learn things, recognize patterns, and make decision. Neural network consist of artificial neurons called units arranged in a series of layers with each connects to the layers on either side. Units could be devide into three :
 1. `input units` : the input layer consists of one or more feature variables, denoted as x1, x2, ..., xn. It is designed to receive various data from outside.
