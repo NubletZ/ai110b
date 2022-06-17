@@ -8,7 +8,7 @@ A neural network is one of machine learning models. The basic idea behind neural
 
 Below is the structure of a basic neural network looks like, it looks like a simple neuron in human brain.
 
-<img src="Source/SchemeNN.png" alt="Network Settings" title="Network Settings" width="400"><br>
+<img src="Source/SchemeNN.png" alt="Network Settings" title="Network Settings" width="450"><br>
 
 ## Key Components of Neural Network
 1. `Input`: Inputs are the features that are fed into the model for learning purposes.
@@ -194,7 +194,7 @@ run_test_harness()
 
 By running the above program, we will got the output as shown below :
 
-<img src="Source/(qm)outputVerbose2.JPG" alt="StepFunction" height="400px" />
+<img src="Source/(qm)outputVerbose2.JPG" alt="StepFunction" width="800px" />
 
 Result :
 
