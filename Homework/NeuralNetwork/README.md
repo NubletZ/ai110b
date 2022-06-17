@@ -8,7 +8,7 @@ A neural network is one of machine learning models. The basic idea behind neural
 
 Below is the structure of a basic neural network looks like, it looks like a simple neuron in human brain.
 
-<img src="source/SchemeNN.png" alt="Network Settings" title="Network Settings" width="400"><br>
+<img src="Source/SchemeNN.png" alt="Network Settings" title="Network Settings" width="400"><br>
 
 ## Key Components of Neural Network
 1. `Input`: Inputs are the features that are fed into the model for learning purposes.
