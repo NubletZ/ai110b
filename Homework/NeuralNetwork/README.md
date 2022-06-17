@@ -249,3 +249,9 @@ The output result :
 <img src="Source/(qm)Predicted.JPG" alt="StepFunction" width="150px" />
 
 For the full code, please open this google colab link [(share)NeuralNetwork(Handwritting_recognition).ipynb](https://colab.research.google.com/drive/1qy2WWvO5dZqrO3uSmPRAZR4RTKSTuZfH?usp=sharing).
+
+# References
+1. https://machinelearningmastery.com/how-to-develop-a-convolutional-neural-network-from-scratch-for-mnist-handwritten-digit-classification/
+2. https://www.analyticsvidhya.com/blog/2021/11/artificial-neural-network-and-its-implementation-from-scratch/
+3. https://www.hotelmize.com/blog/how-does-a-neural-network-work-implementation-and-5-examples/
+4. https://www.tensorflow.org/guide/keras/train_and_evaluate
