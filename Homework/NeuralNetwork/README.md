@@ -196,7 +196,7 @@ By running the above program, we will got the output as shown below :
 
 <img src="Source/(qm)outputVerbose2.JPG" alt="StepFunction" width="800px" />
 
-Result :
+The result is shown below with blue lines indicate model performance on the training dataset and orange lines indicate performance on the hold out test dataset :
 
 <img src="Source/(qm)TrainGraph.png" alt="StepFunction" height="300px" />
 
