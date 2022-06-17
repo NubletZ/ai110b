@@ -200,6 +200,8 @@ The result is shown below with blue lines indicate model performance on the trai
 
 <img src="Source/(qm)TrainGraph.png" alt="StepFunction" height="300px" />
 
+<br/>
+
 After building the model, we then can use this model to predict some images. I use [sample_image2](https://lcmlinebot.tk/digit/sample_image2.png), [sample_image3](https://lcmlinebot.tk/digit/sample_image3.png), [sample_image5](https://lcmlinebot.tk/digit/sample_image5.png), [sample_image8](https://lcmlinebot.tk/digit/sample_image8.png), and [sample_imagge](https://machinelearningmastery.com/wp-content/uploads/2019/02/sample_image.png) as images to be predicted.
 
 ```python
